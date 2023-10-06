@@ -26,7 +26,8 @@ int main(void)
 			}
 		}
 		a++;
-	k++;	}
+		}
+	k++;
 	}
 
 	return (0);
