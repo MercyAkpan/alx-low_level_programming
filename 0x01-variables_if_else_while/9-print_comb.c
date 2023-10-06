@@ -13,9 +13,12 @@ int main(void)
 		{
 		putchar('\n');
 		}
-	putchar(f);
-	putchar(44);
-	putchar(32);
+		else
+		{
+		putchar(f);
+		putchar(44);
+		putchar(32);
+		}
 	}
 	return (0);
 }
