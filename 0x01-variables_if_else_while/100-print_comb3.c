@@ -11,24 +11,24 @@ int main(void)
 	{
 		while (a <= '9')
 		{
-		if (!(k > a) || k == a)
-		{
-			putchar(k);
-			putchar(a);
-			if (k == '8' && a == '9')
+			if (!(k > a) || k == a)
 			{
-			putchar('\n');
+				putchar(k);
+				putchar(a);
+				if (k == '8' && a == '9')
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			else
-			{
-			putchar(',');
-			putchar(' ');
-			}
+			a++;
 		}
-		a++;
-		}
-	k++;
+		a = '0';
+		k++;
 	}
-
 	return (0);
 }
