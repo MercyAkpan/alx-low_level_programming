@@ -5,9 +5,9 @@
   */
 int main(void)
 {
-	int k = '0', a = '1';
+	int k = '0', a = '0';
 
-	while (k <= '8')
+	while (k <= '9')
 	{
 		while (a <= '9')
 		{
