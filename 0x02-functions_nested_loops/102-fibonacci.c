@@ -6,18 +6,20 @@
 int main(void)
 {
 	int n = 50;
-	int i = 0;
-	int f = 1;
-	int g = 2;
-	int c;
+	int i = 2;
+	long f = 1;
+	long g = 2;
+	long c;
 
-	printf("%d, %d, ", f, g);
-	for (i = 0; i < n; i++)
+	printf("%ld, %ld, ", f, g);
+	while (i < n)
 	{
+
 		c = f + g;
 		f = g;
 		g = c;
-		printf("%d, ", c);
+		printf("%ld, ", c);
+		i++;
 	}
 	printf("\n");
 	return (0);
