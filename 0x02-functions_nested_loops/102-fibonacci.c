@@ -18,7 +18,14 @@ int main(void)
 		c = f + g;
 		f = g;
 		g = c;
+		if (i == 49)
+		{
+			printf("%ld", c);
+		}
+		else 
+		{
 		printf("%ld, ", c);
+		}
 		i++;
 	}
 	printf("\n");
