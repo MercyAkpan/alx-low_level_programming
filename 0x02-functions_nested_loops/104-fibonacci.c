@@ -5,7 +5,6 @@
   */
 int main(void)
 {
-	int n = 98;
 	int i = 0;
 	unsigned long int k = 1;
 	unsigned long int m = 2;
