@@ -6,12 +6,12 @@
 int main(void)
 {
 	int i = 0;
-	unsigned long int k = 1;
-	unsigned long int m = 2;
-	unsigned long int c;
+	long int k = 1;
+	long int m = 2;
+	long int c;
 
 	printf("%lu, %lu, ", k, m);
-	for (i = 0; i < 98; i++)
+	for (i = 2; i < 98; i++)
 	{
 		c = k + m;
 		k = m;
