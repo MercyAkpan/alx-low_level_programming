@@ -9,6 +9,8 @@ int main(void)
 
 	for (; a <= 100; a++)
 	{
+		h = a / 10;
+		j = a % 10;
 		if ((a % 3 == 0) && (a % 5 == 0))
 		{
 			printf("FizzBuzz ");
@@ -21,9 +23,7 @@ int main(void)
 		{
 			printf("Buzz ");
 		}
-		h = a / 10;
-		j = a % 10;
-		if (a > 9)
+		else if (a > 9)
 		{
 			printf("%d", h);
 		}
