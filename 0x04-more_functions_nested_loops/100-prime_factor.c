@@ -1,18 +1,20 @@
 #include <stdio.h>
+#include "main.h"
 /**
-  *
-  **
+  * main - wntry point
+  * Return: 0 on success
   */
 int main(void)
 {
-	long int i, n = 612852475143;
+	unsigned long int i, n = 612852475143;
+	
 	for (i = 3; i < 782849; i = i + 2)
 	{
-		if ((n % i == 0) && (n != i))
+		while ((n % i == 0) && (n != i))
 		{
 			n = n / i;
 		}
-		printf("%ld", n);
 	}
+	printf("%ld\n", n);
 	return (0);
 }
