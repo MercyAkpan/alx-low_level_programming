@@ -1,23 +1,21 @@
 #include "main.h"
 /**
-  *
-  *
-  *
+  * print_triangle - none
+  * @size: none
   */
 void print_triangle(int size)
 {
-	int row = 1, space, ash;
+	int row, space, ash;
 
-	if (size > 0 )
+	if (size > 0)
 	{
-		for (;row <= size; row++)
+		for (row = 1; row <= size; row++)
 		{
-			for (space = size - row; space > 0; space --)
+			for (space = size - row; space > 0; space--)
 			{
 				_putchar(' ');
 			}
-			space = 
-			for (ash = size - space; ash <= size; ash++)
+			for (ash = 1; ash <= row; ash++)
 			{
 				_putchar('#');
 			}
