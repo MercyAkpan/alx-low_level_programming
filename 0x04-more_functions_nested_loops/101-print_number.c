@@ -5,11 +5,11 @@
   */
 void print_number(int n)
 {
-	int i = n;
+	unsigned int i;
 
 	if (n < 0)
 	{
-		i = -i;
+		i = -n;
 		_putchar('-');
 	}
 	else
