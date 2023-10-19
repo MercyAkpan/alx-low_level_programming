@@ -7,8 +7,8 @@
 char *rot13(char *p)
 {
 	int i = 0, j = 0, k;
-	char b[26] = {"abcdefghijklmnopqrstuvwxyz"};
-	char n[26] = {"nopqrstuvwxyzabcdefghijklm"};
+	char b[26] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
+	char n[26] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
 
 	for (i = 0; p[i] != '\0'; i++)
 	{
