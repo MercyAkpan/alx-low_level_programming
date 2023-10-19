@@ -7,13 +7,13 @@
 char *rot13(char *p)
 {
 	int i = 0, j = 0, k;
-	char b[26] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
-	char n[26] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
+	char b[52] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
+	char n[52] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
 
 	for (i = 0; p[i] != '\0'; i++)
 	{
 		k = 0;
-		for (j = 0; j < 26; j++, k++)
+		for (j = 0; j < 52; j++, k++)
 		{
 			if (p[i] == b[j])
 			{
