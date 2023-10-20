@@ -13,76 +13,50 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int i = 0, j = 0, s, k = 0, cr = 0, t, u;
 
 	while (n1[i] != '\0')
-	{
 		i++;
-	}
 	while (n2[j] != '\0')
-	{
 		j++;
-	}
 	i--;
 	j--;
-/** shpould i decrement i and j  yet,as n1[5] is actually n[5 + '\0'] and n[5] is in fact,n[0] to n[4]**/
-	
-	if ( i >= size_r || j >= size_r )
-/* as it adds the numbers xter-wise .it needs the index position n1 + n2 to be <= max.size of reslt*/
-	{
-		return NULL;
-	}
+	if (i >= size_r || j >= size_r)
+/*Adds the numbers xter-wise.Index position n1 + n2 to be <= maxsize of reslt*/
+		return (NULL);
 	while (i >= 0 || j >= 0 || cr == 1)
 	{
 		if (i >= 0)
-		{
 			t = n1[i] - '0';
-		}
 		else
-		{
 			t = 0;
-		}
 		if (j >= 0)
-		{
 			u = n2[j] - '0';
-		}
 		else
-		{
 			u = 0;
-		}
 		s = t + u + cr;
 		if (s >= 10)
-		{
 			cr = 1;
-		}
 		else
-		{
 			cr = 0;
-		}
 		if (k >= (size_r - 1))
-		{
-			return NULL;
-		}
+			return (NULL);
 		r[k] = (s % 10) + '0';
 		k++;
 		i--;
 		j--;
 	}
 	if (k == size_r)
-	{
-		return NULL;
-	}
+		return (NULL);
 	r[k] = '\0';
-	rev_string (r);
+	rev_string(r);
 	return (r);
 }
-
 /**
-  *
-  *
-  *
+  * rev_string - this reverses a string
+  * @r: this is strmijg to be reversed
   */
 void rev_string(char *r)
 {
 	int w = 0, b = 0, cage;
-	
+
 	while (r[w] != '\0')
 	{
 		w++;
