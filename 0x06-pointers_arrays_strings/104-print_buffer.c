@@ -36,8 +36,21 @@ void print_buffer(char *b, int size)
 				j = 10 - h;
 				while (j > 0)
 				{
-					printf("     ");
+					/*if (j = 1)
+					printf("  ")
+					else
+					{*/
+					if (h % 2 != 0)
+					{
+					printf("  ");
+					h--;
+					}
+					if (h % 2 == 0)
+					{
+					printf(" ");
+					printf("    ");
 					j = j - 2;
+					}
 				}
 				break;
 			}
