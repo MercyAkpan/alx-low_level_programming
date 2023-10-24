@@ -15,9 +15,11 @@ char *_strchr(char *s, char c)
 	{
 		if (s[kk] == c)
 			return (s + kk);
-		else if (s[kk + 1] == '\0')
-			return (NULL);
+		/**
+		  *else if (s[kk] == '\0')
+			*return (NULL);
+		 */
 	}
+	return (NULL);
 	printf("\n");
-	return (0);
 }
