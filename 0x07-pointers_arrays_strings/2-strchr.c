@@ -11,11 +11,11 @@ char *_strchr(char *s, char c)
 {
 	unsigned int kk;
 
-	for (kk = 0; s[kk] != '\0'; kk++)
+	for (kk = 0; ; kk++)
 	{
 		if (s[kk] == c)
 			return (s + kk);
 	}
-	return (NULL);
 	printf("\n");
+	return (0);
 }
