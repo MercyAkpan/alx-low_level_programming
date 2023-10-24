@@ -16,14 +16,9 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				for (; s[i] != '\0'; i++)
-				{
-					printf("%c", s[i]);
-				}
-				break;
+				printf("%c", s[i]);
 			}
 		}
 	}
-
 	return (s);
 }
