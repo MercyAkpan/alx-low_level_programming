@@ -17,7 +17,7 @@ char *_strchr(char *s, char c)
 		{
 			for (; s[kk] != '\0'; kk++)
 			{
-				printf("%c", s[kk]);
+				return (s + kk);
 			}
 		}
 		else if (s[kk + 1] == '\0')
