@@ -1,30 +1,27 @@
 #include "main.h"
 /**
-  *
-  *
-  *
-  *
+  *  _strspn - this gives length
+  * @s: this is strinbg to be searched
+  * @accept: this is allowed chacrters.
+  *Return: length of bytes in 's' and 'accept'
   */
 unsigned int _strspn(char *s, char *accept)
 /*NB:Return value is not a pointer/array so R-Value can be just a number*/
 {
 	int i, h, bytes = 0;
 
-	for (; s[h] != '\0'; h++)
+	for (h = 0; ; h++)
 	{
-		if (accept[i] != '\0')
+		for (i = 0; ; i++)
 		{
-			for (i = 0; accept[i] != '\0'; i++)
+			if (s[h] == accept[i])
 			{
-				if (s[h] == accept[i])
-				{
-					bytes++;
-				}
-				else
-					continue;
+				bytes++;
+				break;
 			}
+			else if (accept[i + 1] == '\0')
+				return (bytes);
 		}
-		else if 
 	}
-	return (0);
+	return (bytes);
 }
