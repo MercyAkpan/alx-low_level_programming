@@ -1,0 +1,55 @@
+#include "main.h"
+int palind(char *s, char *r);
+char *_palin(char *s);
+/**
+  *(
+  *
+  *
+  *
+  *
+  */
+ int is_palindrome(char *s)
+{
+	char *r;
+	
+	r = _palin(s);
+	return (palind(s, r));
+}
+
+/**
+  *
+  *
+  *
+  *
+  *
+  */
+char *_palin(char *s)
+{
+	if (*(s + 1) != '\0')
+	return (_palin(s + 1));
+	
+	return (s);
+}
+
+/**
+  *
+  *
+  *
+  *
+  *
+  */
+int palind(char *s, char *r)
+{
+	if (*(s) != '\0')
+	{
+		if (*r == *s)
+		{
+			/*return (1);*/
+			return (palind(s + 1, r + 1));
+		}
+		else 
+			return (0);
+	}
+	else 
+		return (1);
+}
