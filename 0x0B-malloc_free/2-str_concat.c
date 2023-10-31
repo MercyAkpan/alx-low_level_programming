@@ -12,21 +12,18 @@ char *str_concat(char *s1, char *s2)
 	char *ptt;
 	unsigned int k = 0, i, j = 0, length;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	for (i = 0; s1[i] != '\0'; i++)
 		k++;
 	for (i = 0; s2[i] != '\0'; i++)
 		j++;
 	length = k + j;
-
 	ptt = malloc((sizeof(char) * length) + 1);
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-	s2 = "";
-	/**
-	  *if (ptt == NULL)
-	*	return (NULL);
-	*/
+	if (ptt == NULL)
+		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
 	ptt[i] = s1[i];
 	for (j = 0; s2[j] != '\0'; i++, j++)
