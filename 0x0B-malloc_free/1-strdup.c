@@ -2,11 +2,10 @@
 #include <stdlib.h>
 #include <stddef.h>
 /**
-  *
-  *
-  *
-  *
-  */
+  * _strdup - this returns a duplicate of a string
+  * @str: this is the string to be duplicated
+  * Return: this returns the duplicated string or NULL
+ */
 char *_strdup(char *str)
 {
 	char *s;
