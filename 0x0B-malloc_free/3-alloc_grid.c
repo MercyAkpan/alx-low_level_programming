@@ -23,6 +23,7 @@ int **alloc_grid(int width, int height)
 		for (i = 0; i < h; i++)
 	{
 		ppt[i] = malloc(sizeof(int) * w);
+	/*why can't I free instantly here too -free(ppt[i])-I get wrong output*/
 		if (ppt[i] == NULL)
 		{
 			for (; i >= 0; i--)
