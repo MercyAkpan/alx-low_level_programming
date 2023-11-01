@@ -20,8 +20,12 @@ int **alloc_grid(int width, int height)
 	{
 		ppt[i] = malloc(sizeof(int) * w);
 		if (ppt[i] == NULL)
-			/*for (; i >= 0; i--)*/
-			return (NULL);
+			for (; i >= 0; i--)
+			{
+				free(ppt[i]);
+				free(ppt);
+				return (NULL);
+			}
 	}
 	for (i = 0; i < h; i++)
 		for (j = 0; j < w; j++)
