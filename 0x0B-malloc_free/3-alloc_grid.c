@@ -20,17 +20,17 @@ int **alloc_grid(int width, int height)
 		free(ppt);
 		return (NULL);
 	}
-		for (i = 0; i < w; i++)
+		for (i = 0; i < h; i++)
 	{
 		ppt[i] = malloc(sizeof(int) * w);
 		if (ppt[i] == NULL)
 		{
-			for (i--; i >= 0; i--)
+			for (; i >= 0; i--)
 			{
 				free(ppt[i]);
 				free(ppt);
-				return (NULL);
 			}
+			return (NULL);
 		}
 	}
 	for (i = 0; i < h; i++)
