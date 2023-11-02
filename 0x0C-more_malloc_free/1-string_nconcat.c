@@ -21,7 +21,7 @@
 	for (i = 0; s2[i] != '\0'; i++)
 		jk++;
 	sum = length + jk;
-	xtr = malloc(sizeof(char) * (sum) + 1);
+	xtr = malloc(sizeof(char) * (sum + 1));
 	if(xtr == NULL)
 	{
 		free(xtr);
@@ -29,7 +29,7 @@
 	}
 	for (i = 0; s1[i] != '\0'; i++)
 		xtr[i] = s1[i];
-	for (j = 0; j < n && s2[j] != '\0'; j++)
+	for (j = 0; j < n && s2[j] != '\0'; i++, j++)
 		xtr[i] = s2[j];
 	/*free(xtr);*/
 	return (xtr);

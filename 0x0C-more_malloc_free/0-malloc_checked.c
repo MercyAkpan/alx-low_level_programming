@@ -9,7 +9,9 @@
   */
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *xtr = malloc(b);
+	unsigned int *xtr;
+	
+	xtr = malloc(b);
 	if (xtr == NULL)
 		exit (98);
 	return (xtr);
