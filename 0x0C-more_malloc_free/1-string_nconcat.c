@@ -1,16 +1,16 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-  *
-  *
-  *
-  *
-  *
+  * string_nconcat -This concatenates two strings.
+  * @s1: This is the 1st string.
+  * @s2: This is the 2nd string.
+  * @n: this is the maximu number of bytes of s2 taken.
+  * Return: This returns a pointer to a character
   */
-  char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int jk = 0,length = 0, i = 0, j = 0, sum;
-	char * xtr;
+	unsigned int jk = 0, length = 0, i = 0, j = 0, sum;
+	char *xtr;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -22,7 +22,7 @@
 		jk++;
 	sum = length + jk;
 	xtr = malloc(sizeof(char) * (sum + 1));
-	if(xtr == NULL)
+	if (xtr == NULL)
 	{
 		free(xtr);
 		return (NULL);
