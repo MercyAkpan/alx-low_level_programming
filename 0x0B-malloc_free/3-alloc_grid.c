@@ -14,7 +14,6 @@ int **alloc_grid(int width, int height)
 	if (w <= 0 || h <= 0)
 		return (NULL);
 	ppt = malloc(sizeof(int *) * h);
-	free(ppt);
 	if (ppt == NULL)
 	{
 		free(ppt);
@@ -26,11 +25,9 @@ int **alloc_grid(int width, int height)
 	/*why can't I free instantly here too -free(ppt[i])-I get wrong output*/
 		if (ppt[i] == NULL)
 		{
-			for (; i >= 0; i--)
-			{
+			for (i--; i >= 0; i--)
 				free(ppt[i]);
-				free(ppt);
-			}
+			free(ppt);
 			return (NULL);
 		}
 	}
