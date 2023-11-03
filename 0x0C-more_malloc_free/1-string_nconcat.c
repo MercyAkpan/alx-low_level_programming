@@ -20,6 +20,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		length++;
 	for (i = 0; s2[i] != '\0'; i++)
 		jk++;
+	if (jk > n)
+		jk = n;
 	sum = length + jk;
 	xtr = malloc(sizeof(char) * (sum + 1));
 	if (xtr == NULL)
@@ -29,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (i = 0; s1[i] != '\0'; i++)
 		xtr[i] = s1[i];
-	for (j = 0; j < n && s2[j] != '\0'; i++, j++)
+	for (j = 0;  j < jk && s2[j] != '\0'; i++, j++)
 		xtr[i] = s2[j];
 	xtr[i] = '\0';
 	/*free(xtr);*/
