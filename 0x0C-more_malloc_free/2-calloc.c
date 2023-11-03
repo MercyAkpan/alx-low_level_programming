@@ -8,13 +8,16 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int *xxb;
+	char *xxb;
+	unsigned int i;
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
 	xxb = malloc(size * nmemb);
 	if (xxb == NULL)
 		return (NULL);
+	for (i = 0; i < (size * nmemb); i++)
+		xxb[i] = 0;
 	return (xxb);
 }
 
