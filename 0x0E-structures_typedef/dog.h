@@ -1,7 +1,7 @@
 #ifndef "dog.h"
 #define "dog.h"
-#ifndef "main_h"
-#define "main_h"
+#endif
+#include "main.h"
 /**
   * struct dog - this is the struct of type "dog"
   * @name: this is the variable
