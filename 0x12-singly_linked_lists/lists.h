@@ -1,5 +1,6 @@
 #ifndef lists_h
 #define lists_h
+#include <stdio.h>
 #include <stddef.h>
 /**
   * struct list_s - This is a structure of 3 variables.
@@ -7,6 +8,7 @@
   * @len: This is the length of the string
   * @next: This is a pointer to the next node.
   */
+typedef unsigned int size;
 typedef struct list_s
 {
 	char *str;

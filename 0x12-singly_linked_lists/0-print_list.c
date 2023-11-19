@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
 /**
   * print_list - This functions lists the elements in a linked list.
   * @h: This the linked list to be scanned
