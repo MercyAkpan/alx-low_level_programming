@@ -16,13 +16,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (!head)
 		return (NULL);
 	addnode = (list_t *)malloc(sizeof(list_t));
+	if (!addnode)
+        {
+		return (NULL);
+        }
 	addnode->str = strdup(str);
 	addnode->len = length(str);
 	addnode->next = NULL;
-	if (!addnode)
-	{
-		return (NULL);
-	}
 	if (!*head)
 		*head = addnode;
 	else
