@@ -8,7 +8,6 @@
   * @len: This is the length of the string
   * @next: This is a pointer to the next node.
   */
-typedef unsigned int size;
 typedef struct list_s
 {
 	char *str;
