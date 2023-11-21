@@ -6,7 +6,7 @@
   */
 size_t list_len(const list_t *h)
 {
-	size iter;
+	unsigned int iter;
 
 	if (h == NULL)
 		return (0);
