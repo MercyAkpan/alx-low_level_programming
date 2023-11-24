@@ -8,8 +8,6 @@
   */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	struct dog *none;
-	none = d;
 /*	none = malloc(sizeof(struct dog));
 	
 	if (none == NULL)
@@ -19,7 +17,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 	*/
 	d->name = name;
-	none->age = age;
-	none->owner = owner;
+	d->age = age;
+	d->owner = owner;
 	/*return (d);*/
 }
