@@ -8,14 +8,18 @@
   */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d = malloc(sizeof(dog));
-	if (d == NULL)
+	struct dog *none;
+	none = d;
+/*	none = malloc(sizeof(struct dog));
+	
+	if (none == NULL)
 	{
-		free (d);
+		free (none);
 		return (NULL);
 	}
-	d -> name = name;
-	d -> age = age;
-	d -> owner = owner;
+	*/
+	d->name = name;
+	none->age = age;
+	none->owner = owner;
 	/*return (d);*/
 }
