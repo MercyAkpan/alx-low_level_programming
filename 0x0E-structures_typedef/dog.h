@@ -1,6 +1,6 @@
-#ifndef "dog.h"
-#define "dog.h"
-#endif
+#ifndef dog_h
+#define dog_h
+#include "main.h"
 /**
   * struct dog - this is the struct of type "dog"
   * @name: this is the variable
@@ -14,3 +14,5 @@ struct dog
 	float age;
 	char *owner;
 };
+void init_dog(struct dog *d, char *name, float age, char *owner);
+#endif
