@@ -17,10 +17,10 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		free(add_node2);
 		return (NULL);
 	}
-	/*if (add_node2->str  == NULL)*/
+	/*what of if (add_node2->str  == NULL)*/
 	add_node2->n = n;
 	add_node2->next = NULL;
-	if (!*head)/*or (!head) instead */
+	if (!*head)
 	{
 		*head = add_node2;
 		return (*head);
