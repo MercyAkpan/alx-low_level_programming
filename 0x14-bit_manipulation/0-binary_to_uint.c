@@ -1,43 +1,29 @@
 #include "main.h"
-#include <math.h>
 /**
-  *
-  *
-  *
-  *
-  */
+   * binary_to_uint - binary to dxeciml.
+   * @b: Binary number to be passed
+   * Return: returns ssize number.
+   */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int a, j = 0, i, g = 2, sum = 0;
+	unsigned int length;
+	unsigned long int i = 0, j = 0, sum = 0, power = 1, binary = 2;
 
-	if (!b)
+	if (b == NULL)
 		return (0);
-
-	while (*(b + j))
-		j++;
-	j--;
-	for (i = 0; *(b + i) != '\0'; i++,j--)
+	for (length = 0; b[length] != '\0'; length++)
+		;
+	if (length == 1 && (b[0] == '0' || b[0] == '1'))
+		return (b[0] - 48);
+	for (i = 0; b[i] != '\0'; i++)
 	{
-		/*if(*(b + i) == '0' || *(b + i) == '1')
-		{
-			a = ((2 ^ j) * (*(b + i)));
-			sum += a;
-		}*/
-		if (*(b + i) != '0' && *(b + i) != '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		else 
-		{	if (j == 0)
-			g = 1;
-			else
-			{
-				for (; j > 0; j--)
-				{
-					g *= 2;
-				}
-			}
-			a = (g * (*(b + i)- '0'));
-			sum += a;
-		}
+		for (j = length - 1; j > 0; j--)
+			power = power * binary;
+		sum = sum + (power * (b[i] - 48));
+		length--;
+		power = 1;
 	}
 	return (sum);
 }
