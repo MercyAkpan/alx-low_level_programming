@@ -8,4 +8,5 @@ void print_bi(unsigned long int n);
 #include <unistd.h>
 #include <stddef.h>
 #include <math.h>
+int get_bit(unsigned long int n, unsigned int index);
 #endif
