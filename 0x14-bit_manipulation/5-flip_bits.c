@@ -8,7 +8,7 @@
   */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	size_t output; 
+	size_t output;
 	       size_t counter;
 
 	output = n ^ m;
