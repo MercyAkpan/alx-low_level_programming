@@ -3,6 +3,7 @@
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
 void print_bi(unsigned long int n);
+int get_endianness(void);
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
