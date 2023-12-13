@@ -10,4 +10,5 @@ void print_bi(unsigned long int n);
 #include <math.h>
 int set_bit(unsigned long int *n, unsigned int index);
 int get_bit(unsigned long int n, unsigned int index);
+int clear_bit(unsigned long int *n, unsigned int index);
 #endif
