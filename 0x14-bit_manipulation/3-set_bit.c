@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-  *
-  *
-  *
-  *
+  * set_bit - This sets bit.
+  * @n: This is the nth.
+  * @index: This is the index
+  * Return: This returns integer.
   */
 int set_bit(unsigned long int *n, unsigned int index)
 {
@@ -16,5 +16,3 @@ int set_bit(unsigned long int *n, unsigned int index)
 	*n = ((*n) | cover);
 	return (1);
 }
-  
-
