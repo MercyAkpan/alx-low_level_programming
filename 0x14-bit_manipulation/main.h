@@ -7,6 +7,7 @@ void print_bi(unsigned long int n);
 #include <stdlib.h>
 #include <unistd.h>
 #include <stddef.h>
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
 #include <math.h>
 int set_bit(unsigned long int *n, unsigned int index);
 int get_bit(unsigned long int n, unsigned int index);

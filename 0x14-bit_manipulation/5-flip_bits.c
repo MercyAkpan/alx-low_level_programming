@@ -8,9 +8,10 @@
   */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	size_t output, counter;
+	size_t output; 
+	       size_t counter;
 
-	output = n ^ m
+	output = n ^ m;
 	for (counter = 0; output > 0;)
 	{
 		if ((output & 1) == 1)
