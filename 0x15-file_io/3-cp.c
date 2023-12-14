@@ -1,10 +1,9 @@
 #include "main.h"
 /**
-  *
-  *
-  *
-  *
-  *
+  * error_ -This is
+  * @file_from: This is the file
+  * @file_to:  This is the
+  * @rgv: This isthe command
   */
 void error_(int file_from, int file_to, char *rgv[])
 {
@@ -14,18 +13,17 @@ void error_(int file_from, int file_to, char *rgv[])
 		exit(98);
 	}
 	if (file_to == -1)
-	{	
+	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", rgv[2]);
 		exit(99);
 	}
 }
 
 /**
-  
-  *
-  *
-  *
-  *
+  * main - This ist the enry
+  * @argc: This is the args count
+  * @argv: This is the args
+  * Return: THis returbns integer
   */
 int main(int argc, char *argv[])
 {
@@ -49,8 +47,8 @@ int main(int argc, char *argv[])
 		if (charc == -1)
 			error_(-1, 0, argv);
 		now = write(file_to, space, charc);
-			if (now == -1)	
-				error_(0, -1, argv);	
+			if (now == -1)
+				error_(0, -1, argv);
 	}
 
 	err_close = close(file_from);
