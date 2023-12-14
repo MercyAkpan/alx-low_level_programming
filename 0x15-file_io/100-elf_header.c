@@ -1,8 +1,4 @@
 #include "main.h"
-/**
-  * check_elf - is file an ELF
-  * @e_ident - pointer
-  */
 
 #include <elf.h>
 #include <sys/types.h>
@@ -23,6 +19,10 @@ void print_type(unsigned int e_type, unsigned char *e_ident);
 void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_elf(int elf);
 
+/**
+  * check_elf - is file an ELF
+  * @e_ident: -pointer
+  */
 
 void check_elf(unsigned char *e_ident)
 {
@@ -42,7 +42,7 @@ void check_elf(unsigned char *e_ident)
 }
 
 /**
- * print_magic - Prints the magic numbers 
+ * print_magic - Prints the magic numbers
  * @e_ident: A pointer to an array
  */
 void print_magic(unsigned char *e_ident)
@@ -257,7 +257,7 @@ void close_elf(int elf)
 }
 
 /**
- * main - Entry point. 
+ * main - Entry point.
  * @argc: The number of arguments .
  * @argv: An array of pointers .
  * Return: 0 on success.
