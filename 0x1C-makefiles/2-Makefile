@@ -1,8 +1,7 @@
-NAME = school
-CC = gcc
-SRC = main.c school.c
-OBJ = $(SRC:%.c=%.o)
-all: $(OBJ)
-	${CC} $(OBJ) -o $(NAME)
-#echo:
-#	echo ${NAME}
+NAME = school # school cant be a string as it is a file
+CC = gcc 
+SRC = main.c school.c # = not := , := makes it a target, no longer assigning a variable
+OBJ = $(SRC:%.c=%.o) # This removes the .c in "file.c" to "file.o"
+all: $(OBJ) #Only rule allowed is <all>.
+	${CC} $(OBJ) -o $(NAME) # This converts .o to .exec file
+# gcc main.o -o school

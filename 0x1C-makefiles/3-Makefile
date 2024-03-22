@@ -1,11 +1,16 @@
-.PHONY : school
-NAME = school
+NAME = school # school cant be a string as it is a file
 CC = gcc
-SRC = main.c school.c
-OBJ := $(SRC:%.c=%.o)
-all: $(NAME) #main.o school.o
-$(NAME):
-		${CC} -c -o %.o %.c
-		${CC} %.o -o $@
-#echo:
-#       echo ${NAME}
+SRC = main.c school.c # = not := , := makes it a target, no longer assigning a variable
+OBJ = $(SRC:%.c=%.o) # This removes the .c in "file.c" to "file.o"  
+RM = rm
+all: $(OBJ) #Only rule allowed is <all>.
+	${CC} $(OBJ) -o $(NAME) # This converts .o to .exec file
+# gcc main.o -o school
+clean:
+	$(RM) -f *~ school
+oclean:
+	$(RM) -f main.o school.o
+fclean: clean oclean
+re: oclean all
+
+
