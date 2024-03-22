@@ -7,9 +7,9 @@ all: $(OBJ) #Only rule allowed is <all>.
 	${CC} $(OBJ) -o $(NAME) # This converts .o to .exec file
 # gcc main.o -o school
 clean:
-	$(RM) -f *~ school
+	$(RM) -f *~ $(NAME) 
 oclean:
-	$(RM) -f main.o school.o
+	$(RM) -f main.o $(NAME).o
 fclean: clean oclean
 re: oclean all
 
