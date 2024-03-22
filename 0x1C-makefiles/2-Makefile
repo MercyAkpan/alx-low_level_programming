@@ -2,7 +2,7 @@
 NAME = "school"
 CC = gcc
 SRC = main.c school.c
-OBJ = main.o school.o
+OBJ := $(SRC:%.c=%.o)
 all: school
 school: $(OBJ) #main.o school.o
 	${CC} $(OBJ) -o $@
