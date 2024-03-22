@@ -1,0 +1,12 @@
+.PHONY : school 
+NAME = "school"
+CC = gcc
+SRC = main.c school.c
+OBJ = main.o school.o
+all: school
+school: $(OBJ) #main.o school.o
+	${CC} $(OBJ) -o $@
+%.o : %.c
+	${CC} -c -o $@ $^
+echo:
+	echo ${NAME}
