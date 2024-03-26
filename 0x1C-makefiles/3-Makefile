@@ -12,7 +12,8 @@ clean:
 	@#This is used to del exec file and temp vi files	
 oclean:
 	$(RM) -f $(OBJ)
-	@#This del object files
+	@#This del object files.
+	@#Never hard-code main.o &&,|| school.o
 fclean: clean oclean
 	@#This delivers output of oclean and clean command
 re: oclean all

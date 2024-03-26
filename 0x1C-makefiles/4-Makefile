@@ -3,14 +3,22 @@ CC = gcc
 SRC = main.c school.c # = not := , := makes it a target, no longer assigning a variable
 OBJ = $(SRC:%.c=%.o) # This removes the .c in "file.c" to "file.o"
 RM = rm #Del specified files.
-all: $(OBJ) #This builds exec file.
-    ${CC} $(OBJ) -o $(NAME)
-    @# This converts .o to .exec file
-    @# gcc main.o -o school
+CFLAGS = -Wall -Werror -Wextra -pedantic
+	#This is an implicit var in 'makefile', that auto-create object.It uses my customized CFLAGS var now.
+	# FROMAT IS 
+	##%.o: %.c
+	#$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+
+all: $(OBJ) #This builds exec file,if 
+	${CC} $(OBJ) -o $(NAME) 
+	@#This always executes.
+	@# This converts .o to .exec file
+	@# gcc main.o -o school
 clean:
 	$(RM) -f *~ $(NAME)
-	@#This is used to del exec file and temp vi files       oclean:
-$(RM) -f main.o $(NAME).o
+	@#This is used to del exec file and temp vi files       
+oclean:
+	$(RM) -f main.o $(NAME).o
 	@#This del object files
 fclean: clean oclean
 	@#This delivers output of oclean and clean command
