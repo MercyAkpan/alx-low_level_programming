@@ -1,18 +1,19 @@
-NAME = school
-@# school cant be a string as it is a file
+NAME = school# school cant be a string as it is a file
 CC = gcc
 SRC = main.c school.c # = not := , := makes it a target, no longer assigning a variable
 OBJ = $(SRC:%.c=%.o) # This removes the .c in "file.c" to "file.o"  
-RM = rm
-all: $(OBJ) #Only rule allowed is <all>.
+RM = rm #Del specified files.
+all: $(OBJ) #This builds exec file. 
 	${CC} $(OBJ) -o $(NAME)
 	@# This converts .o to .exec file
 	@# gcc main.o -o school
 clean:
-	$(RM) -f *~ $(NAME) 
+	$(RM) -f *~ $(NAME)
+	@#This is used to del exec file and temp vi files	
 oclean:
-	$(RM) -f main.o $(NAME).o
+	$(RM) -f $(OBJ)
+	@#This del object files
 fclean: clean oclean
+	@#This delivers output of oclean and clean command
 re: oclean all
-
-
+	@#This delivers oclean command, and all command.
