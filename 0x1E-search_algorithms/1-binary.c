@@ -1,7 +1,6 @@
 #include "search_algos.h"
 /**
-	* linear_search - This uses the linear search algo,
-	*                to search for a value sequentially
+	* binary_search - This uses the binary search algo, to search for a value
 	* @array: This is a pointer to an array
 	* @size: Length of numbers in the array
 	* @value: This is the value to be searched for
@@ -16,13 +15,17 @@ int binary_search(int *array, size_t size, int value)
 	return (result_index);
 }
 /**
-  *
-  *
-  *
-  */
+	* real_binary_search - This searches for a value using Binary_search technique
+	* @array: This is a pointer to an array
+	* @low: Lowest current index
+	* @value: This is the value to be searched for
+	* @high: Highest current index
+	* Return: Returns index of value (1st occurence) or -1, if not found
+		*/
 int real_binary_search(int *array, int value, int low, int high)
 {
 	int mid;
+
 	printf("Searching in array: ");
 	print_array(array, low, high);
 /*	printf("low: %d   ",low);*/
@@ -30,7 +33,7 @@ int real_binary_search(int *array, int value, int low, int high)
 /*	printf("==================================\n");*/
 	while (low != high)
 	{
-		mid = (low + high)/2;
+		mid = (low + high) / 2;
 /*		printf("mid: %d    \n",mid);*/
 		if (array[mid] == value)
 		{
@@ -51,20 +54,21 @@ int real_binary_search(int *array, int value, int low, int high)
 }
 
 /**
-  *
-  *
-  *
-  */
+	* print_array - This prints current array searched
+	* @low: Lowest current index
+	* @array: This is the pointer to array
+	* @high: Highest current index
+	*/
 void print_array(int *array, int low, int high)
 {
 	while (low <= high)
 	{
 		if (low == high)
 		{
-			printf("%d\n",array[low]);
-			return; 
+			printf("%d\n", array[low]);
+			return;
 		}
-		printf("%d, ",array[low]);
+		printf("%d, ", array[low]);
 		low++;
 	}
 }
