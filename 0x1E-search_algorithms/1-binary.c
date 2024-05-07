@@ -9,10 +9,13 @@
 int binary_search(int *array, size_t size, int value)
 {
 	int low = 0, high = size - 1, result_index;
-/*	printf("low : %d    ", low);*/
-	/*printf("high : %d    ", high);*/
-	result_index = real_binary_search(array, value, low, high);
-	return (result_index);
+
+	if (array != NULL  && size != 0)
+	{
+		result_index = real_binary_search(array, value, low, high);
+		return (result_index);
+	}
+	return (-1);
 }
 /**
 	* real_binary_search - This searches for a value using Binary_search technique
