@@ -37,7 +37,7 @@ int real_binary_search(int *array, int value, int low, int high)
 /*	printf("low: %d   ",low);*/
 /*	printf("high: %d    \n",high);*/
 /*	printf("==================================\n");*/
-	while (low != high)
+	while (low <= high)
 	{
 		mid = low + (high - low) / 2;
 /*		printf("mid: %d    \n",mid);*/
