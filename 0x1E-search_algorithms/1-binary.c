@@ -19,6 +19,9 @@ int binary_search(int *array, size_t size, int value)
 }
 /**
 	* real_binary_search - This searches for a value using Binary_search technique
+	* SPACE COMPLEXITY - O(log2(n)), as the Space of constant vars
+	*					 made depend on number of Recursive calls.
+	*					 and O(1) for iterative approach.
 	* @array: This is a pointer to an array
 	* @low: Lowest current index
 	* @value: This is the value to be searched for
@@ -36,7 +39,7 @@ int real_binary_search(int *array, int value, int low, int high)
 /*	printf("==================================\n");*/
 	while (low != high)
 	{
-		mid = (low + high) / 2;
+		mid = low + (high - low) / 2;
 /*		printf("mid: %d    \n",mid);*/
 		if (array[mid] == value)
 		{
